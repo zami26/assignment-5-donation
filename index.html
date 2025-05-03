@@ -15,12 +15,13 @@
         <nav class="lg:px-20 lg:py-10">
             <div class="navbar bg-base-100 shadow-sm">
                 <div class="navbar-start hidden lg:block">
-                    <a class="btn btn-outline text-xl font-bold  border-gray-300 text-gray-700 btn-color">Blog</a>
+                    <a class="btn btn-outline text-xl font-bold  border-gray-300 text-gray-700 btn-color"
+                        href="/blog.html" id="blog-btn">Blog</a>
                 </div>
                 <div class="navbar-center  lg:flex">
 
                     <img src="assets/logo.png" alt="">
-                    <a class="ms-2 font-semibold text-xl"> Donate Bangla</a>
+                    <a class="ms-2 font-semibold text-xl" href="/index.html"> Donate Bangla</a>
 
                 </div>
                 <div class="navbar-end ">
@@ -42,7 +43,7 @@
                         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow -ml-28">
                         <li>
                             <div class="navbar-center ">
-                                <a class="btn ">Blog</a>
+                                <a class="btn " href="/blog.html">Blog</a>
                             </div>
                         </li>
                         <li>
@@ -62,12 +63,27 @@
 
     </header>
 
+    <dialog id="my_modal_2" class="modal modal-bottom sm:modal-middle text-center">
+        <div class="modal-box">
+          <h3 class="text-2xl font-bold">CONGRATS!!</h3>
+          <img src="assets/coin.png" class="mx-auto" alt="">
+          <p class="py-4">You have donate for humankind</p>
+          <h1 class=" font-bold">Successfully</h1>
+          <div class="modal-action justify-center">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn ">Close Confirmation</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
     <main class="lg:mx-auto lg:max-w-9/10">
         <div class="two-buttons  flex justify-center my-10">
 
             <button id="donation"
                 class="btn  btn-outline text-xl font-bold  border-gray-300 text-gray-700 btn-color">Donation</button>
-            <button  id="history"
+            <button id="history"
                 class="btn  btn-outline text-xl font-bold  border-gray-300 ms-4 text-gray-700 btn-color">History</button>
 
         </div>
@@ -168,12 +184,12 @@
         </div>
 
         <!-- history part -->
-<div id="history-sec" class="hidden">
-    <sec id="history-details">
+        <div id="history-sec" class="hidden">
+            <sec id="history-details">
 
-    </sec>
-</div>
-        
+            </sec>
+        </div>
+
 
     </main>
     <script src="js/donate.js"></script>

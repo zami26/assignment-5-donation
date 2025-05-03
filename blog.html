@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <header>
+        <nav class="lg:px-20 lg:py-10">
+            <div class="navbar bg-base-100 shadow-sm">
+                <div class="navbar-start hidden lg:block">
+                    <a class="btn btn-outline text-xl font-bold  border-gray-300 text-gray-700 btn-color" href="/blog.html">Blog</a>
+                </div>
+                <div class="navbar-center  lg:flex">
+
+                    <img src="assets/logo.png" alt="">
+                    <a class="ms-2 font-semibold text-xl" href="/index.html"> Donate Bangla</a>
+
+                </div>
+                <div class="navbar-end ">
+                    <div class="hidden lg:block lg:flex">
+                        <img src="assets/coin.png" alt="">
+                        <h3 class="ms-2 font-semibold text-xl"><span id="owned-amount">5550</span> BDT</h3>
+
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow -ml-28">
+                        <li>
+                            <div class="navbar-center ">
+                                <a class="btn ">Blog</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="">
+                                <img src="assets/coin.png" alt="">
+                                <h3 class="ms-2 font-semibold text-xl"><span id="update-for-phone">5550</span> BDT</h3>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+        </nav>
+
+
+    </header>
+
+    <main>
+        <section class="max-w-2xl mx-auto p-6">
+            <h2 class="text-3xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+          
+            <div class="space-y-4">
+              <details class="group border border-gray-200  rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium  ">
+                 What is Document Object Model (DOM)?
+                  <span class="transition-transform duration-300 group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p class="mt-2 ">
+                    The Document Object Model (DOM) is a programming interface that represents a web page as a structured tree of objects. It allows programming languages like JavaScript to access, modify, and manipulate the content, structure, and style of HTML or XML documents.
+                </p>
+              </details>
+          
+              <details class="group border border-gray-200  rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer text-lg font-semibold ">
+                  How do you select on element from the DOM?
+                  <span class="transition-transform duration-300 group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p class="mt-2 ">
+                    You can select an element from the DOM using JavaScript methods like getElementById, querySelector, or getElementsByClassName. For example, document.getElementById("title") selects the element with ID title. These methods let you access and manipulate HTML elements dynamically.
+                </p>
+              </details>
+          
+              <details class="group border border-gray-200  rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium ">
+                 What is event delegation in the context of DOM, an why is it useful?
+                  <span class="transition-transform duration-300 group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p class="mt-2 ">
+                    Event delegation is a technique where a single event listener is added to a parent element to handle events on its child elements using event bubbling. It’s useful because it improves performance and simplifies code by avoiding multiple listeners, especially for dynamic or large lists of elements.
+                </p>
+              </details>
+              <details class="group border border-gray-200  rounded-lg p-4">
+                <summary class="flex justify-between items-center cursor-pointer text-lg font-medium ">
+                How do you manipulate an element's attributes and style using the DOM?
+                  <span class="transition-transform duration-300 group-open:rotate-180">
+                    ⌄
+                  </span>
+                </summary>
+                <p class="mt-2 ">
+                    You can manipulate an element's attributes using methods like setAttribute, getAttribute, and removeAttribute. To change styles, use the .style property—for example, element.style.color = "red".
+                </p>
+              </details>
+            </div>
+          </section>
+          
+    </main>
+    <script src="/js/donate.js"></script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 function donateNow(btnIdToDonate,amountFromInput,amountAlreadyHave,reason){
-    document.getElementById(btnIdToDonate).addEventListener('click',function(event){
+    document.getElementById(btnIdToDonate).addEventListener('click',function(){
         donationAmountText=document.getElementById(amountFromInput).value;
         alreadyHavingText=document.getElementById(amountAlreadyHave).innerText;
         ownedAmountText= document.getElementById("owned-amount").innerText;
@@ -11,6 +11,16 @@ function donateNow(btnIdToDonate,amountFromInput,amountAlreadyHave,reason){
         ownedAmount=Number(ownedAmountText);
         ownedAmountForPhone=Number(ownedAmountForPhoneText);
         // console.log(donationAmount,alreadyHaving,ownedAmount,ownedAmountForPhone);
+        if (isNaN(donationAmount) || donationAmount==" ") {
+            alert('Enter a valid amount');
+            return;
+        } else if (donationAmount > ownedAmount) {
+            alert("Not enough amount");
+            return;
+        } else {
+            document.getElementById('my_modal_2').showModal();
+        }
+        
         newAmount=alreadyHaving+donationAmount;
         restAmount=ownedAmount-donationAmount;
         restAmountForPhone=ownedAmountForPhone-donationAmount;
@@ -43,6 +53,7 @@ donateNow("donate-student", "donating-amount-student", "student-having-amount","
 
 document.getElementById("history").addEventListener('click',function(){
     document.getElementById("cart-sec").classList.add("hidden");
+    // document.getElementById("history").classList.add("btn-color-active");
     document.getElementById("history-sec").classList.remove("hidden");
 })
 document.getElementById("donation").addEventListener('click',function(){
@@ -50,3 +61,11 @@ document.getElementById("donation").addEventListener('click',function(){
     document.getElementById("history-sec").classList.add("hidden");
 
 })
+
+
+// const currentPage = window.location.pathname;
+// if (currentPage.includes("blog.html")) {
+//     document.getElementById("blog-btn").classList.add("btn-color");
+//   } else if (currentPage.includes("index.html") || currentPage === "/") {
+//     document.getElementById("blog-btn").classList.remove("btn-color");
+//   }
