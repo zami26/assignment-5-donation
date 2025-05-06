@@ -53,11 +53,14 @@ donateNow("donate-student", "donating-amount-student", "student-having-amount","
 
 document.getElementById("history").addEventListener('click',function(){
     document.getElementById("cart-sec").classList.add("hidden");
-    // document.getElementById("history").classList.add("btn-color-active");
+    document.getElementById("history").classList.add("btn-color-active");
+    document.getElementById("donation").classList.remove("btn-color-active");
     document.getElementById("history-sec").classList.remove("hidden");
 })
 document.getElementById("donation").addEventListener('click',function(){
     document.getElementById("cart-sec").classList.remove("hidden");
+    document.getElementById("history").classList.remove("btn-color-active");
+    document.getElementById("donation").classList.add("btn-color-active");
     document.getElementById("history-sec").classList.add("hidden");
 
 })
@@ -65,7 +68,7 @@ document.getElementById("donation").addEventListener('click',function(){
 
 // const currentPage = window.location.pathname;
 // if (currentPage.includes("blog.html")) {
-//     document.getElementById("blog-btn").classList.add("btn-color");
+//     document.getElementById("blog-btn").classList.add("btn-color-active");
 //   } else if (currentPage.includes("index.html") || currentPage === "/") {
-//     document.getElementById("blog-btn").classList.remove("btn-color");
+//     document.getElementById("blog-btn").classList.remove("btn-color-active");
 //   }
